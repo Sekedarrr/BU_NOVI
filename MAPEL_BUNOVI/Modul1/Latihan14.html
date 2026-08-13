@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat segitiga</title>
+</head>
+<body>
+    <h1>Membuat setengah lingkaran berwarna</h1>
+    <canvas id="Descan" width="640" height="480" style="border: 1px solid #000000;">
+        </canvas>
+        <script>
+            const canvas = document.getElementById("Descan");
+            const ctx = canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.arc(300, 200, 100, 0, Math.PI);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+            </script>
+</body>
+</html>

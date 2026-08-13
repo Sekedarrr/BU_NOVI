@@ -1,0 +1,6 @@
+canvas {
+    display: block;
+    border: 3px solid red; 
+    background-color: grey;
+    margin: 50px auto;
+}
