@@ -1,0 +1,8 @@
+CHECKLIST TUGAS HALAMAN 25
+[✓] 1. Ukuran player diperbesar menjadi 48 x 48.
+[✓] 2. Beberapa enemy muncul acak dan jumlahnya bertambah sesuai level.
+[✓] 3. Target menang ditambah menjadi 15 koin.
+[✓] 4. Level permainan dikembangkan sampai level 5.
+[✓] 5. Bagian biodata sudah dibuat (isi data sendiri pada STUDENT_PROFILE di script.js).
+[ ] 6. Rekam video saat menang dan saat kalah secara terpisah.
+[ ] 7. Unggah ZIP dan video ke tautan yang dibagikan guru.

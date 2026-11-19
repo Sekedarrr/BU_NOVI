@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    --navy: #17365d;
+    --blue: #1d5f91;
+    --teal: #159b8c;
+    --orange: #e9784c;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #233044;
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+}
+
+.game-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 22px;
+    text-align: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    color: #1d3557;
+    font-size: clamp(23px, 5vw, 34px);
+    letter-spacing: .4px;
+}
+
+.subtitle {
+    margin: 0 0 18px;
+    color: #657184;
+    font-size: 14px;
+}
+
+.game-card {
+    width: 100%;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 3px solid #1d3557;
+    border-radius: 9px;
+    background: #a8dadc;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    background: #a8dadc;
+}
+
+.game-menu {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    color: white;
+    background: rgba(8, 24, 38, .76);
+}
+
+.menu-content {
+    width: min(100%, 390px);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #ffd166;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.game-menu h2 {
+    margin: 0 0 12px;
+    font-size: clamp(22px, 5vw, 32px);
+}
+
+.game-menu p {
+    line-height: 1.5;
+}
+
+#menuMessage {
+    margin: 0 auto 17px;
+    max-width: 340px;
+    font-size: 14px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform .15s ease, filter .15s ease, background .15s ease;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+button:focus-visible {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+.primary-btn {
+    padding: 13px 28px;
+    color: white;
+    background: #159b8c;
+    font-size: 16px;
+}
+
+.menu-hint {
+    margin: 14px 0 0;
+    color: #dce8ee;
+    font-size: 11px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0 10px;
+}
+
+.controls button {
+    width: 54px;
+    height: 54px;
+    color: #fff;
+    background: #1d3557;
+    font-size: 22px;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.controls button:active {
+    background: #e9784c;
+}
+
+.instruction {
+    margin: 8px 0 12px;
+    color: #606b79;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+kbd {
+    padding: 1px 5px;
+    border: 1px solid #cbd3dc;
+    border-radius: 4px;
+    background: #f2f4f7;
+    font: inherit;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.restart-btn,
+.sound-btn {
+    padding: 11px 17px;
+    color: white;
+    font-size: 12px;
+}
+
+.restart-btn {
+    background: var(--orange);
+}
+
+.sound-btn {
+    background: #457b9d;
+}
+
+.biodata-card {
+    margin-top: 20px;
+    padding: 17px 18px;
+    text-align: left;
+    border: 1px solid #dce4ec;
+    border-radius: 12px;
+    background: #f7fafc;
+}
+
+.biodata-card h2 {
+    margin: 0 0 13px;
+    color: #1d3557;
+    font-size: 17px;
+    text-align: center;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 8px 12px;
+    font-size: 13px;
+}
+
+.biodata-grid span {
+    color: #687486;
+}
+
+.biodata-grid strong {
+    overflow-wrap: anywhere;
+    color: #25364b;
+}
+
+.profile-note {
+    margin: 14px 0 0;
+    color: #687486;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.page-footer {
+    margin-top: 18px;
+    color: #8993a1;
+    font-size: 11px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 13px;
+        border-radius: 13px;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    .controls button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .biodata-card {
+        padding: 14px;
+    }
+
+    .biodata-grid {
+        grid-template-columns: 88px minmax(0, 1fr);
+        font-size: 12px;
+    }
+}

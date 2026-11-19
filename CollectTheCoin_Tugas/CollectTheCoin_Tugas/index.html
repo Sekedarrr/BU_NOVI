@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Game Collect The Coin berbasis HTML5 Canvas dengan GUI, multimedia, dan desain responsif.">
+    <title>Collect The Coin - HTML5 Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-container">
+        <header class="page-header">
+            <h1>🪙 COLLECT THE COIN</h1>
+            <p class="subtitle">Kumpulkan 15 koin, hindari musuh, dan capai level 5!</p>
+        </header>
+
+        <section class="game-card" aria-label="Permainan Collect The Coin">
+            <div class="canvas-wrapper">
+                <canvas id="game" width="600" height="400" aria-label="Area permainan Collect The Coin">
+                    Browser Anda tidak mendukung HTML5 Canvas.
+                </canvas>
+                <div id="gameMenu" class="game-menu">
+                    <div class="menu-content">
+                        <p class="eyebrow">HTML5 CANVAS PROJECT</p>
+                        <h2 id="menuTitle">COLLECT THE COIN</h2>
+                        <p id="menuMessage">Kumpulkan 15 koin untuk menang. Hindari semua musuh!</p>
+                        <button id="startBtn" class="primary-btn">MULAI GAME</button>
+                        <p class="menu-hint">Tekan tombol panah / WASD atau gunakan tombol di bawah game.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls" aria-label="Kontrol permainan untuk layar sentuh">
+                <button type="button" data-key="ArrowLeft" aria-label="Bergerak ke kiri">◀</button>
+                <button type="button" data-key="ArrowUp" aria-label="Bergerak ke atas">▲</button>
+                <button type="button" data-key="ArrowDown" aria-label="Bergerak ke bawah">▼</button>
+                <button type="button" data-key="ArrowRight" aria-label="Bergerak ke kanan">▶</button>
+            </div>
+
+            <p class="instruction">
+                <strong>Komputer:</strong> gunakan tombol panah atau W, A, S, D.<br>
+                <strong>Smartphone:</strong> tekan tombol arah di atas.<br>
+                Tekan <kbd>R</kbd> untuk mengulang permainan.
+            </p>
+
+            <div class="action-buttons">
+                <button id="restartBtn" class="restart-btn" type="button">↻ RESTART GAME</button>
+                <button id="soundBtn" class="sound-btn" type="button" aria-pressed="true">🔊 SUARA: ON</button>
+            </div>
+        </section>
+
+        <section class="biodata-card" aria-labelledby="biodata-title">
+            <h2 id="biodata-title">👤 BIODATA PEMBUAT</h2>
+            <div class="biodata-grid">
+                <span>Nama</span><strong id="studentName">ISI NAMA LENGKAP</strong>
+                <span>Kelas</span><strong id="studentClass">ISI KELAS</strong>
+                <span>No. Absen</span><strong id="studentNumber">ISI NOMOR ABSEN</strong>
+                <span>Sekolah</span><strong id="studentSchool">ISI NAMA SEKOLAH</strong>
+            </div>
+            <p class="profile-note">Ganti biodata pada bagian <code>STUDENT_PROFILE</code> di file <code>script.js</code> sebelum dikumpulkan.</p>
+        </section>
+
+        <footer class="page-footer">Proyek Materi 7 · GUI, Multimedia, dan Responsivitas HTML5 Canvas</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
